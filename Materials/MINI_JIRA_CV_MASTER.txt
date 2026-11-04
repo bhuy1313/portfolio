@@ -1,0 +1,86 @@
+================================================================================
+MINI JIRA — MASTER CV CONTENT REPOSITORY (ENGLISH)
+Bui Le Duc Huy | Software Engineer
+================================================================================
+
+--------------------------------------------------------------------------------
+PART 1: EXECUTIVE CV BLOCK (READY TO PASTE DIRECTLY INTO YOUR CV)
+--------------------------------------------------------------------------------
+
+Mini Jira – Enterprise Agile Project Management Platform
+Full-Stack Software Engineer | Personal Project | 08/2026 – 10/2026
+Technologies: Next.js 16 (App Router), React 19, TypeScript, PostgreSQL, Prisma ORM 7, Better Auth, Tailwind CSS v4, Vitest, Playwright
+GitHub: https://github.com/[your-username]/mini-jira | Live Demo: https://[your-demo-url].vercel.app
+
+• Architected a production-grade Jira & Linear-inspired collaboration platform featuring multi-tenant workspaces, Scrum sprints, hierarchical sub-tasks, dynamic custom fields, and burndown analytics.
+• Engineered an O(1) Fractional Decimal Positioning algorithm for Kanban drag-and-drop (@dnd-kit), completely eliminating PostgreSQL table-locking batch re-indexes under concurrent updates.
+• Implemented server-authoritative Role-Based Access Control (RBAC) via a zero-trust Actor Context Pattern and engineered a real-time event pipeline using Server-Sent Events (SSE) with replay buffers.
+• Developed a custom zero-dependency AST-based Markdown tokenizer and renderer with multi-word @mention autocomplete, eliminating XSS vulnerabilities by strictly avoiding dangerouslySetInnerHTML.
+• Designed a 60 FPS GPU-accelerated micro-interaction and animation system (Linear-grade cubic-bezier curves, card hover elevations, and spring dialogs) fully compliant with WCAG 2.2 AA accessibility.
+• Established a rigorous test pyramid achieving 500 automated Vitest unit/integration tests and 30+ Playwright E2E suites covering core journeys, visual diffs, and automated axe-core audits with 0 TypeScript errors.
+
+
+--------------------------------------------------------------------------------
+PART 2: COMPREHENSIVE MASTER REPOSITORY (BY TECHNICAL DOMAIN)
+(Use these modular bullets to customize your CV for specific job descriptions)
+--------------------------------------------------------------------------------
+
+1. SYSTEM ARCHITECTURE & DOMAIN MODELING
+• Vertical Slice Architecture: Structured the application into autonomous, domain-driven feature modules (src/features/<domain>/), isolating Server Actions, business services, database repositories, Zod validation schemas, and UI components.
+• Server-Enforced RBAC (Actor Pattern): Implemented a zero-trust authorization boundary where every Server Action and database query strictly verifies workspace and project membership (Owner, Admin, Member) directly on the server, guaranteeing that security never relies on client-side state.
+• Multi-Tenant Data Isolation: Engineered strict relational boundaries in PostgreSQL/Prisma ensuring complete tenant data isolation across workspaces, projects, tasks, comments, and audit logs.
+
+2. PERFORMANCE ENGINEERING & ALGORITHMS
+• Fractional Decimal Positioning (O(1) Reordering): Replaced conventional array index recalculation with arbitrary-precision PostgreSQL Decimal positions; inserting or reordering items calculates a fractional midpoint in O(1) time, eliminating write contention and database locks.
+• Optimistic UI with Automatic Rollback: Built an optimistic client-side state machine for Kanban drag-and-drop, title inline renames, and sub-task toggles, ensuring an instantaneous 0ms perceived latency with resilient rollback on network exceptions.
+• Full-Text Search Indexing: Implemented PostgreSQL native full-text search leveraging tsvector, GIN indexing, and websearch_to_tsquery ranking for workspace-isolated task and issue queries.
+
+3. REAL-TIME & EVENT-DRIVEN INTEGRATION
+• Server-Sent Events (SSE) Live Hub: Built a lightweight real-time synchronization engine (/api/live/stream) with in-memory event channels and historical replay buffers, keeping collaborators' boards synchronized without the overhead of heavy third-party WebSocket clusters.
+• Outbound Webhook Dispatcher: Engineered an enterprise webhook system supporting Slack, Discord, and generic JSON payloads with cryptographic HMAC-SHA256 signature verification, timeout resiliency, and delivery audit logging.
+• Automation Rules Engine: Implemented a configurable event-driven trigger/action engine (WHEN status changes -> THEN assign user / log activity / notify) with a hardcoded recursion-depth guard (maxDepth = 2) to prevent cascading infinite loops.
+
+4. SECURITY, AUTH & SAFE CONTENT AUTHORING
+• Zero-Dependency Markdown AST Engine: Handcrafted a 250-line deterministic Markdown tokenizer and AST compiler that renders directly into native React elements; sanitized URI schemes (http, https, mailto) completely prevent script injection (XSS) without external runtime dependencies.
+• Better Auth Integration: Configured secure session management with HTTP-only cookies, password complexity policies (8–128 chars, uppercase, lowercase, numbers), rate limiting, and trusted origin verification.
+• Demo Guardrails & Data Preservation: Built automated safeguards (demo-guard.ts) that intercept and gracefully disable destructive actions (workspace/project hard deletion and password changes) on public demo accounts (@demo.com) to keep showcase data permanently intact.
+• 1-Click Demo Persona Showcase: Created a seamless login flow featuring 4 pre-configured personas (Owner, Admin, Developer, Member) with automatic credential injection for instant evaluation by recruiters.
+
+5. UI/UX POLISH, ACCESSIBILITY & MOTION
+• 60 FPS GPU-Accelerated Animations: Configured native Tailwind CSS v4 animation tokens and custom cubic-bezier curves (cubic-bezier(0.16, 1, 0.3, 1)) for slide-over task drawers (240ms), modal popups (200ms), and Command Palette dropdowns (160ms).
+• Tactile Micro-Interactions: Added subtle hover elevations (-translate-y-0.5), active click feedback (active:scale-[0.98]), and smooth strikethrough state transitions on checklist items.
+• Command Palette (⌘K / Ctrl+K): Integrated a keyboard-first navigation system supporting quick project jumps, theme switching, and task search.
+• WCAG 2.2 AA Compliance: Designed accessible dialog and drawer patterns with role="dialog", aria-modal, auto-focus restoration, keyboard trap management, and strict compliance with prefers-reduced-motion.
+
+6. QUALITY ENGINEERING & AUTOMATED TESTING
+• 500 Unit & Integration Tests (Vitest): Authored 500 automated tests across 42 test suites verifying authorization matrices, decimal math, service boundaries, duration calculations, and edge-case error redaction.
+• 30+ Playwright E2E User Journeys: Developed comprehensive end-to-end browser suites testing multi-user flows, comment moderation, custom fields, outbound webhooks, and timesheet CSV exports.
+• Automated Accessibility & Visual Audits: Integrated @axe-core/playwright into the CI pipeline to catch zero accessibility violations and configured visual regression snapshot testing.
+• Strict TypeScript Discipline: Maintained 100% type safety with zero 'any' usage, validated request schemas with Zod, and achieved clean compilation with 0 errors under tsc --noEmit.
+
+
+--------------------------------------------------------------------------------
+PART 3: SPECIALIZED TARGETED VERSIONS
+--------------------------------------------------------------------------------
+
+[TARGETED VERSION A: FRONTEND / REACT / NEXT.JS FOCUS]
+• Developed a high-density, Linear-inspired frontend featuring optimistic Kanban drag-and-drop, right-side slide-over drawers, and global Command Palette (⌘K).
+• Crafted 60 FPS GPU-accelerated micro-interactions (cubic-bezier easing, card hover elevations, spring dialogs) strictly adhering to prefers-reduced-motion standards.
+• Built a custom zero-dependency Markdown editor with write/preview toggle, multi-word @mention listbox, and strict sanitized rendering.
+• Enforced strict accessibility compliance (WCAG 2.2 AA, ARIA 1.2 dialog/combobox patterns) verified via automated @axe-core/playwright test suites.
+• Maintained 100% type safety under TypeScript strict mode across Server Actions, form states, and optimistic UI transitions.
+
+[TARGETED VERSION B: BACKEND / NODE.JS / DATABASE FOCUS]
+• Designed a Vertical Slice Architecture separating business logic into autonomous domain services: Tasks, Sprints, Custom Fields, Automation, and Worklogs.
+• Solved Kanban reordering database contention by implementing high-precision Fractional Decimal Positioning, reducing O(N) array updates to O(1) single-row writes.
+• Engineered server-enforced multi-tenant RBAC (Owner/Admin/Member) with zero-trust validation and integrated Better Auth session security.
+• Built an outbound webhook dispatcher supporting Slack/Discord with HMAC-SHA256 signature verification, timeout handling, and delivery audit logs.
+• Engineered a real-time Server-Sent Events (SSE) live hub with in-memory event replay buffers for seamless cross-client synchronization.
+• Authored 500 Vitest unit and service tests covering complex domain logic, recursion depth guards, and database transactions.
+
+
+--------------------------------------------------------------------------------
+PART 4: ATS KEYWORDS (FOR CV SKILLS SECTION & LINKEDIN)
+--------------------------------------------------------------------------------
+Next.js 16 (App Router), React 19, TypeScript (Strict), PostgreSQL, Prisma ORM 7, Better Auth, Tailwind CSS v4, Server Actions, Server-Sent Events (SSE), Vertical Slice Architecture, Role-Based Access Control (RBAC), Fractional Indexing, Optimistic UI, RESTful APIs, Webhooks (HMAC-SHA256), Automated Testing, Vitest (500 tests), Playwright (E2E), WCAG 2.2 AA, axe-core.
+================================================================================

@@ -1,0 +1,84 @@
+================================================================================
+ECOMMERCE.WEB — MASTER CV CONTENT REPOSITORY (ENGLISH)
+Bui Le Duc Huy | Software Engineer
+================================================================================
+
+--------------------------------------------------------------------------------
+PART 1: EXECUTIVE CV BLOCK (READY TO PASTE DIRECTLY INTO YOUR CV)
+--------------------------------------------------------------------------------
+
+ECommerce.Web – Modern Full-Stack E-Commerce Platform
+Full-Stack Software Engineer | Personal Project | 05/2026 – 08/2026
+Technologies: ASP.NET Core 10 MVC, C#, Entity Framework Core 10, SQL Server / SQLite, ASP.NET Core Identity, xUnit, Moq, Tailwind CSS, Docker
+GitHub: https://github.com/[your-username]/ECommerce.Web | Live Demo: https://ecommerce-demo-9phe.onrender.com
+
+• Architected a production-ready e-commerce platform (.NET 10) featuring customer storefronts, address books, multi-tier checkout, coupon engines, and an administrative control portal.
+• Integrated the VNPay online payment gateway with cryptographic HMAC-SHA512 checksum validation, return URL verification, and idempotent IPN webhook callbacks to prevent duplicate payment processing.
+• Implemented verified-purchase product reviews, configurable shipping carrier methods, automated VAT tax computation, and promotional coupon algorithms (% and fixed discounts with total usage caps).
+• Hardened application security utilizing ASP.NET Core Identity, Anti-Forgery Tokens (CSRF) across all mutating endpoints, brute-force account lockout (5 attempts / 5 mins), and production IP rate limiting.
+• Built a clean, editorial minimalist design system (Anti-AI-Slop, neutral palette) with functional micro-interactions, container image zoom, and smooth cart transitions (@formkit/auto-animate).
+• Established an automated test suite of 277 unit and integration tests (xUnit, Moq) verifying pricing calculations, inventory deductions, and security boundaries with containerized Docker deployment on Render.
+
+
+--------------------------------------------------------------------------------
+PART 2: COMPREHENSIVE MASTER REPOSITORY (BY TECHNICAL DOMAIN)
+(Use these modular bullets to customize your CV for specific job descriptions)
+--------------------------------------------------------------------------------
+
+1. SYSTEM ARCHITECTURE & CORE ENGINEERING
+• Clean Tiered Architecture: Designed a decoupled ASP.NET Core 10 MVC architecture separating Controllers, Domain Services (Cart, Order, Payment, Coupon, Shipping, Review), ViewModels, and Data Access.
+• Entity Framework Core 10: Modeled complex relational schemas with EF Core 10 code-first migrations, navigational properties, composite unique indexes, and dual-database compatibility (SQL Server LocalDB for dev, SQLite for containerized production).
+• Dependency Injection & Service Boundaries: Encapsulated business logic into isolated service interfaces, decoupling database transactions from HTTP presentation controllers.
+
+2. PAYMENT GATEWAYS & TRANSACTION INTEGRITY
+• VNPay Cryptographic Integration: Implemented VNPay payment processing leveraging HMAC-SHA512 checksum signature verification for tamper-proof transaction requests and response handling.
+• Idempotent IPN Webhook Processing: Designed the payment callback pipeline with idempotency safeguards, preventing race conditions or duplicate order fulfillment from repeated gateway webhooks.
+• Flexible Payment Method Strategy: Architected a pluggable payment provider pattern supporting Cash on Delivery (COD) and hosted redirect gateways with graceful configuration fallbacks.
+
+3. E-COMMERCE DOMAIN BUSINESS LOGIC
+• Coupon & Discount Engine: Developed an order discount service supporting percentage-based and fixed-amount coupons with criteria validation (minimum order value, expiry dates, total usage caps).
+• Verified Purchase Review Pipeline: Implemented anti-spam customer reviews restricted strictly to verified purchasers, backed by an administrative review approval queue.
+• Shipping & VAT Computation: Engineered automated checkout calculations factoring in configurable shipping carrier methods and VAT tax computation via the options pattern.
+• Order & Payment Lifecycles: Built decoupled order fulfillment state transitions (Pending -> Processing -> Shipped -> Completed -> Cancelled) synchronized with independent payment statuses (Pending, Paid, RefundPending, Refunded) and automated stock decrementing.
+
+4. APPLICATION SECURITY & ACCESS CONTROL
+• ASP.NET Core Identity & Lockout: Configured user authentication with PBKDF2 password hashing, secure cookie authentication, and brute-force protection locking accounts after 5 failed attempts for 5 minutes.
+• Multi-Role Authorization Matrix: Implemented role-based authorization gates across Admin, Operator, and Customer tiers, safeguarding sensitive administrative endpoints.
+• CSRF & Input Hardening: Enforced ValidateAntiForgeryToken across all POST/PUT/DELETE actions, coupled with dual-layer validation (DataAnnotations on client/server + domain validation).
+• Production Rate Limiting & Fail-Fast Secrets: Configured IP-based client rate limiting on authentication routes and fail-fast startup checks requiring environment secret passwords for production administrative accounts.
+
+5. FRONTEND DESIGN SYSTEM & MICRO-INTERACTIONS
+• Anti-AI-Slop Editorial Design: Created a bespoke, high-density minimalist UI inspired by MedusaJS, Vercel Store, and Apple, utilizing an Obsidian/Neutral zinc palette rather than noisy gradients.
+• Fluid Cart Auto-Animate: Integrated @formkit/auto-animate for zero-layout-shift cart item additions and removals, smoothly sliding items into place without jarring visual snaps.
+• Tactical Motion & Micro-Interactions: Engineered tactile button press physics (active:scale-[0.98]), internal overflow image zooms (group-hover:scale-105), and full compliance with prefers-reduced-motion: reduce.
+
+6. QUALITY ENGINEERING, TESTING & DEVOPS
+• 277 Automated Tests (xUnit & Moq): Authored 277 comprehensive unit and integration tests executing in ~5 seconds, covering payment checksums, cart calculations, coupon validations, and controller authorization.
+• Mock In-Memory Databases: Developed isolated test fixture factories utilizing in-memory SQLite and mock DbContext instances for deterministic test runs.
+• Docker Containerization: Created optimized multi-stage Docker builds deploying the ASP.NET Core 10 runtime to Render Cloud with automated database seeding and environment configuration.
+
+
+--------------------------------------------------------------------------------
+PART 3: SPECIALIZED TARGETED VERSIONS
+--------------------------------------------------------------------------------
+
+[TARGETED VERSION A: .NET / C# BACKEND & API FOCUS]
+• Architected a decoupled ASP.NET Core 10 MVC e-commerce backend utilizing Entity Framework Core 10 and SQL Server/SQLite with Service Layer & Unit-of-Work patterns.
+• Implemented VNPay payment gateway integration with HMAC-SHA512 cryptographic checksum validation and idempotent webhook callback handlers to eliminate duplicate orders.
+• Engineered secure order fulfillment, promotional coupon engines (% and fixed limits), verified-purchase customer reviews, and automated VAT/shipping calculation services.
+• Hardened application security using ASP.NET Core Identity, multi-role RBAC (Admin/Operator/Customer), brute-force account lockout, and CSRF token verification.
+• Authored 277 xUnit and Moq unit/integration tests running in ~5s across all business services and deployed the application via Docker containers on Render.
+
+[TARGETED VERSION B: FULL-STACK WEB DEVELOPER FOCUS]
+• Built an end-to-end e-commerce web platform with ASP.NET Core 10 MVC, EF Core 10, C#, and a Tailwind CSS minimalist editorial design system.
+• Developed intuitive customer journeys including product catalog browsing, persistent shopping carts, address books, and coupon redemption flows.
+• Integrated multi-channel checkout supporting Cash on Delivery (COD) and VNPay online payments with automated stock deduction.
+• Designed a comprehensive administrative portal for real-time inventory management, order status transitions, coupon creation, and review moderation.
+• Maintained high reliability with 277 automated unit tests (xUnit/Moq) and containerized production deployment using Docker.
+
+
+--------------------------------------------------------------------------------
+PART 4: ATS KEYWORDS (FOR CV SKILLS SECTION & LINKEDIN)
+--------------------------------------------------------------------------------
+ASP.NET Core 10, .NET 10, C#, Entity Framework Core 10 (EF Core), ASP.NET Core Identity, SQL Server, SQLite, MVC Architecture, Service Layer, Unit of Work, Repository Pattern, Dependency Injection (DI), RESTful APIs, VNPay Integration, HMAC-SHA512, Payment Gateways, Webhooks, Idempotency, Role-Based Access Control (RBAC), CSRF Protection, Rate Limiting, xUnit, Moq, Unit Testing, Tailwind CSS, Docker, Render Deployment.
+================================================================================
