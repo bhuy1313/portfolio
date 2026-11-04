@@ -19,7 +19,7 @@ export default function Header() {
     };
     syncIcons();
 
-    const onScroll = () => setScrolled(window.scrollY > 40);
+    const onScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
@@ -41,10 +41,14 @@ export default function Header() {
     { href: "#contact", label: "Contact" },
   ];
 
+  const isSolid = scrolled || menuOpen;
+
   return (
     <nav
-      className={`glass fixed top-0 z-50 w-full transition-all duration-300 ${
-        scrolled ? "shadow-lg shadow-black/5 dark:shadow-black/20" : ""
+      className={`fixed top-0 z-50 w-full transition-all duration-200 ${
+        isSolid
+          ? "border-b border-slate-200/90 bg-white shadow-sm shadow-slate-900/5 dark:border-slate-800/90 dark:bg-[#090d16] dark:shadow-black/30"
+          : "border-b border-transparent bg-transparent"
       }`}
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -132,7 +136,7 @@ export default function Header() {
 
       {/* Mobile menu dropdown */}
       {menuOpen && (
-        <div className="border-b border-slate-200 bg-white/95 px-4 pt-3 pb-6 backdrop-blur-lg md:hidden dark:border-slate-800 dark:bg-[#090d16]/95">
+        <div className="border-b border-slate-200 bg-white px-4 pt-3 pb-6 shadow-xl md:hidden dark:border-slate-800 dark:bg-[#090d16]">
           <div className="flex flex-col space-y-3">
             {navLinks.map((link) => (
               <a
