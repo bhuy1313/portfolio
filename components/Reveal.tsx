@@ -28,6 +28,7 @@ export default function Reveal({
     const el = ref.current;
     if (!el) return;
 
+    // Trigger animation when the element is scrolled at least 70px inside the viewport
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -37,7 +38,10 @@ export default function Reveal({
           }
         });
       },
-      { threshold: 0.1 },
+      {
+        threshold: 0.05,
+        rootMargin: "0px 0px -70px 0px",
+      },
     );
 
     observer.observe(el);
