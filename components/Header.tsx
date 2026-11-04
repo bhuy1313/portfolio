@@ -45,9 +45,9 @@ export default function Header() {
 
   return (
     <nav
-      className={`fixed top-0 z-50 w-full transition-all duration-300 ${
+      className={`fixed top-0 z-50 w-full transition-all duration-200 ${
         isSolid
-          ? "frosted-header shadow-sm shadow-slate-900/5 dark:shadow-black/30"
+          ? "border-b border-slate-200/90 bg-white shadow-sm shadow-slate-900/5 dark:border-slate-800/90 dark:bg-[#090d16] dark:shadow-black/30"
           : "border-b border-transparent bg-transparent"
       }`}
     >
@@ -136,7 +136,7 @@ export default function Header() {
 
       {/* Mobile menu dropdown */}
       {menuOpen && (
-        <div className="frosted-header border-b px-4 pt-3 pb-6 shadow-2xl md:hidden">
+        <div className="border-b border-slate-200 bg-white px-4 pt-3 pb-6 shadow-xl md:hidden dark:border-slate-800 dark:bg-[#090d16]">
           <div className="flex flex-col space-y-3">
             {navLinks.map((link) => (
               <a

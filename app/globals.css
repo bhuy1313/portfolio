@@ -82,18 +82,15 @@
   transform: translateX(0);
 }
 
-/* Apple-grade Frosted Glass for Navbar */
-.frosted-header {
-  background-color: rgba(255, 255, 255, 0.82);
-  backdrop-filter: blur(20px) saturate(180%);
-  -webkit-backdrop-filter: blur(20px) saturate(180%);
+/* Glassmorphism for navbar & cards */
+.glass {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(226, 232, 240, 0.8);
 }
-
-.dark .frosted-header {
-  background-color: rgba(9, 13, 22, 0.82);
-  backdrop-filter: blur(20px) saturate(180%);
-  -webkit-backdrop-filter: blur(20px) saturate(180%);
+.dark .glass {
+  background: rgba(9, 13, 22, 0.85);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
