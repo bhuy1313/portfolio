@@ -9,9 +9,9 @@ export default function About() {
       color: "text-emerald-500",
     },
     {
-      value: "770+",
-      label: "Automated Tests Written",
-      sub: "500 Vitest/Playwright + 277 xUnit/Moq",
+      value: "777",
+      label: "Unit & Integration Tests",
+      sub: "500 Vitest + 277 xUnit · 30+ Playwright E2E",
       color: "text-blue-500",
     },
     {
@@ -47,7 +47,7 @@ export default function About() {
               <div className="space-y-4 text-base leading-relaxed text-slate-600 dark:text-slate-300">
                 <p>
                   I am a <strong className="text-slate-900 dark:text-white">Software Engineering graduate</strong> from{" "}
-                  <strong>Van Lang University (GPA 3.17)</strong> with hands-on expertise building production-ready,
+                  <strong>Van Lang University (GPA 3.17)</strong> with hands-on expertise building end-to-end,
                   full-stack web platforms and reliable backend architectures.
                 </p>
                 <p>
@@ -55,7 +55,7 @@ export default function About() {
                   <strong className="text-slate-900 dark:text-white">zero-trust security</strong>, and{" "}
                   <strong className="text-slate-900 dark:text-white">rigorous Test-Driven Development (TDD)</strong>.
                   Whether structuring enterprise <span className="font-semibold text-emerald-600 dark:text-emerald-400">ASP.NET Core 10 MVC</span> systems
-                  with cryptographic payment gateways (VNPay HMAC-SHA512), or designing high-speed real-time collaboration platforms
+                  with a VNPay sandbox payment gateway (HMAC-SHA512), or designing high-speed real-time collaboration platforms
                   using <span className="font-semibold text-emerald-600 dark:text-emerald-400">Next.js 16 (App Router)</span>, <span className="font-semibold text-emerald-600 dark:text-emerald-400">React 19</span>,
                   and <span className="font-semibold text-emerald-600 dark:text-emerald-400">Prisma ORM 7</span>, I focus on scalable, maintainable solutions.
                 </p>
@@ -73,7 +73,7 @@ export default function About() {
                   </div>
                   <div>
                     <div className="text-sm font-bold text-slate-900 dark:text-white">Van Lang University</div>
-                    <div className="text-xs text-slate-500">Major: Software Engineering (2022 - 2026)</div>
+                    <div className="text-xs text-slate-500">B.Eng. Software Engineering (2022 - 2026)</div>
                   </div>
                 </div>
 
@@ -83,7 +83,7 @@ export default function About() {
                   </div>
                   <div>
                     <div className="text-sm font-bold text-slate-900 dark:text-white">Security &amp; Testing</div>
-                    <div className="text-xs text-slate-500">RBAC, HMAC, CSRF &amp; 770+ Automated Tests</div>
+                    <div className="text-xs text-slate-500">RBAC, HMAC, CSRF &amp; 777 Automated Tests</div>
                   </div>
                 </div>
               </div>

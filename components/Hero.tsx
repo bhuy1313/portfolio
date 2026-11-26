@@ -14,7 +14,7 @@ export default function Hero() {
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
               </span>
-              Available for Software Engineer / Full-Stack Roles
+              Available for Junior Full-Stack / Software Engineer Roles
             </div>
 
             <h1 className="mb-6 text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl text-slate-900 dark:text-white">
@@ -117,7 +117,7 @@ export default function Hero() {
                   </p>
                   <p className="pl-4">
                     <span className="text-slate-500">degree:</span>{" "}
-                    <span className="text-emerald-600 dark:text-emerald-300">&quot;B.S. Software Engineering (GPA 3.17)&quot;</span>,
+                    <span className="text-emerald-600 dark:text-emerald-300">&quot;B.Eng. Software Engineering (GPA 3.17)&quot;</span>,
                   </p>
                   <p className="pl-4">
                     <span className="text-slate-500">coreStack:</span> [
@@ -131,8 +131,8 @@ export default function Hero() {
                   <p className="pl-4">],</p>
                   <p className="pl-4">
                     <span className="text-slate-500">automatedTests:</span>{" "}
-                    <span className="text-cyan-600 dark:text-cyan-400 font-bold">770</span>{" "}
-                    <span className="text-slate-400 text-[11px]">// Vitest, Playwright, xUnit</span>,
+                    <span className="text-cyan-600 dark:text-cyan-400 font-bold">777</span>{" "}
+                    <span className="text-slate-400 text-[11px]">// Vitest + xUnit, 30+ E2E</span>,
                   </p>
                   <p className="pl-4">
                     <span className="text-slate-500">flagships:</span> &#123;
@@ -148,7 +148,7 @@ export default function Hero() {
                   <p className="pl-4">&#125;,</p>
                   <p className="pl-4">
                     <span className="text-slate-500">seeking:</span>{" "}
-                    <span className="text-emerald-600 dark:text-emerald-300">&quot;Software Engineer / Full-Stack&quot;</span>,
+                    <span className="text-emerald-600 dark:text-emerald-300">&quot;Junior Full-Stack / Software Engineer&quot;</span>,
                   </p>
                   <p>&#125;;</p>
 

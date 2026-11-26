@@ -8,12 +8,12 @@ PART 1: EXECUTIVE CV BLOCK (READY TO PASTE DIRECTLY INTO YOUR CV)
 --------------------------------------------------------------------------------
 
 ECommerce.Web – Modern Full-Stack E-Commerce Platform
-Full-Stack Software Engineer | Personal Project | 05/2026 – 08/2026
+Full-Stack Software Engineer | Personal Project | 07/2026 – 11/2026
 Technologies: ASP.NET Core 10 MVC, C#, Entity Framework Core 10, SQL Server / SQLite, ASP.NET Core Identity, xUnit, Moq, Tailwind CSS, Docker
 GitHub: https://github.com/[your-username]/ECommerce.Web | Live Demo: https://ecommerce-demo-9phe.onrender.com
 
-• Architected a production-ready e-commerce platform (.NET 10) featuring customer storefronts, address books, multi-tier checkout, coupon engines, and an administrative control portal.
-• Integrated the VNPay online payment gateway with cryptographic HMAC-SHA512 checksum validation, return URL verification, and idempotent IPN webhook callbacks to prevent duplicate payment processing.
+• Architected a full-stack e-commerce platform (.NET 10) featuring customer storefronts, address books, multi-tier checkout, coupon engines, and an administrative control portal.
+• Built a VNPay sandbox payment prototype with cryptographic HMAC-SHA512 checksum validation, return URL verification, and idempotent IPN webhook callbacks to prevent duplicate payment processing (not production-ready).
 • Implemented verified-purchase product reviews, configurable shipping carrier methods, automated VAT tax computation, and promotional coupon algorithms (% and fixed discounts with total usage caps).
 • Hardened application security utilizing ASP.NET Core Identity, Anti-Forgery Tokens (CSRF) across all mutating endpoints, brute-force account lockout (5 attempts / 5 mins), and production IP rate limiting.
 • Built a clean, editorial minimalist design system (Anti-AI-Slop, neutral palette) with functional micro-interactions, container image zoom, and smooth cart transitions (@formkit/auto-animate).

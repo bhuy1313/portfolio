@@ -61,7 +61,7 @@ const skillCategories: SkillCategory[] = [
     title: "Testing, DevOps & Security",
     icon: "fa-vial-circle-check",
     badgeColor: "bg-amber-500/10 text-amber-600 dark:text-amber-400 border-amber-500/20",
-    description: "Comprehensive test pyramids (770+ tests), containerization, and secure auth.",
+    description: "Comprehensive test pyramids (777 unit/integration + 30+ E2E), containerization, and secure auth.",
     skills: [
       { name: "Vitest (500 tests)", highlight: true },
       { name: "Playwright E2E", highlight: true },

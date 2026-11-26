@@ -58,7 +58,7 @@ export default function Contact() {
               </h3>
 
               <p className="mb-8 text-sm leading-relaxed text-slate-400">
-                I am actively seeking <strong className="text-white">Software Engineer / Full-Stack Developer</strong> roles.
+                I am actively seeking <strong className="text-white">Junior Full-Stack Developer / Software Engineer</strong> roles.
                 Whether you have an open position, an engineering project to collaborate on, or wish to connect, feel free to reach out.
               </p>
 

@@ -18,13 +18,13 @@ const timelineData: TimelineItem[] = [
     type: "project",
     role: "Full-Stack Software Engineer — Mini Jira",
     organization: "Enterprise Agile Platform (Personal Project)",
-    period: "08/2026 – 10/2026",
+    period: "03/2026 – 08/2026",
     badge: "Next.js 16 & React 19",
     badgeClass: "bg-blue-500/10 text-blue-600 dark:text-blue-400 border-blue-500/20",
     dotClass: "bg-blue-500 ring-blue-500/30",
     align: "left",
     description:
-      "Designed and developed a production-grade Jira & Linear-style collaboration platform featuring multi-tenant workspaces, Scrum sprints, dynamic custom fields, and real-time burndown analytics.",
+      "Designed and developed a full-stack Jira & Linear-style collaboration platform featuring multi-tenant workspaces, Scrum sprints, dynamic custom fields, and real-time burndown analytics.",
     highlights: [
       "Engineered O(1) Fractional Decimal Positioning for Kanban drag-and-drop, avoiding DB re-indexing locks.",
       "Implemented zero-trust Actor Context RBAC and Server-Sent Events (SSE) with replay buffers.",
@@ -34,16 +34,16 @@ const timelineData: TimelineItem[] = [
   {
     type: "project",
     role: "Full-Stack Software Engineer — ECommerce.Web",
-    organization: "Production .NET Platform (Personal Project)",
-    period: "05/2026 – 08/2026",
+    organization: "Enterprise .NET Platform (Personal Project)",
+    period: "07/2026 – 11/2026",
     badge: "ASP.NET Core 10 MVC",
     badgeClass: "bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border-emerald-500/20",
     dotClass: "bg-emerald-500 ring-emerald-500/30",
     align: "right",
     description:
-      "Architected a production-ready e-commerce platform (.NET 10 MVC) featuring customer storefronts, multi-tier checkout, coupon engines, and an administrative management portal.",
+      "Architected a full-stack e-commerce platform (.NET 10 MVC) featuring customer storefronts, multi-tier checkout, coupon engines, and an administrative management portal.",
     highlights: [
-      "Integrated VNPay payment gateway with HMAC-SHA512 checksum validation and idempotent IPN callbacks.",
+      "Built a VNPay sandbox payment prototype with HMAC-SHA512 checksum validation and IPN callback handling (not production-ready).",
       "Engineered Clean Tiered Architecture separating Controllers, Domain Services, ViewModels, and EF Core 10 data access.",
       "Established 277 unit & integration tests (xUnit, Moq) with Docker container deployment on Render.",
     ],
@@ -66,7 +66,7 @@ const timelineData: TimelineItem[] = [
   },
   {
     type: "education",
-    role: "Bachelor of Science in Software Engineering",
+    role: "B.Eng. in Software Engineering",
     organization: "Van Lang University",
     period: "2022 – 2026",
     badge: "GPA 3.17 / 4.0",
@@ -93,6 +93,21 @@ const timelineData: TimelineItem[] = [
       "Practical coursework and validation on predictive data modeling, statistical analysis, and machine learning pipelines.",
     highlights: [
       "Trained on data preprocessing, feature engineering, classification models, and algorithmic decision trees.",
+    ],
+  },
+  {
+    type: "cert",
+    role: "VSTEP B2 — English Proficiency",
+    organization: "VSTEP (CEFR B2)",
+    period: "2026",
+    badge: "Language Certification",
+    badgeClass: "bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 border-indigo-500/20",
+    dotClass: "bg-indigo-500 ring-indigo-500/30",
+    align: "right",
+    description:
+      "Certified at CEFR B2 level in English through the Vietnamese Standardized Test of English Proficiency (VSTEP).",
+    highlights: [
+      "Validated listening, reading, writing, and speaking skills at B2 level.",
     ],
   },
 ];

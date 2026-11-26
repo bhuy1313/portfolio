@@ -8,7 +8,7 @@ PART 1: EXECUTIVE CV BLOCK (READY TO PASTE DIRECTLY INTO YOUR CV)
 --------------------------------------------------------------------------------
 
 Mini Jira – Enterprise Agile Project Management Platform
-Full-Stack Software Engineer | Personal Project | 08/2026 – 10/2026
+Full-Stack Software Engineer | Personal Project | 03/2026 – 08/2026
 Technologies: Next.js 16 (App Router), React 19, TypeScript, PostgreSQL, Prisma ORM 7, Better Auth, Tailwind CSS v4, Vitest, Playwright
 GitHub: https://github.com/[your-username]/mini-jira | Live Demo: https://[your-demo-url].vercel.app
 
